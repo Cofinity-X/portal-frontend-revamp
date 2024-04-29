@@ -18,21 +18,12 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import NewsSection from './components/NewsSection'
-import BusinessApplicationsSection from './components/BusinessApplicationsSection'
-import StageSection from './components/StageSection'
-import AppStoreSection from './components/AppStoreSection'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import './Home.scss'
+import './Sidebar.scss'
 
-export default function Home() {
+export const Sidebar = () => {
   return (
-    <main className="home cx-home">
-      <StageSection />
-      <NewsSection />
-      <BusinessApplicationsSection />
-      <AppStoreSection />
-    </main>
+    <>
+      <div className="cx-sidebar">list</div>
+    </>
   )
 }

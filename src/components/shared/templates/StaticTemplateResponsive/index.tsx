@@ -273,14 +273,14 @@ export const StaticTemplateResponsive = ({
       {sectionInfo?.map((provider: ProviderProps) => {
         return (
           <div
-            className="sectionContainer"
+            className="sectionContainer cx-section-container"
             style={{
               backgroundColor: provider.backgroundColor,
             }}
             key={provider.id}
             id={`${provider.id}`}
           >
-            <div className="sectionSubContainer">
+            <div className="sectionSubContainer cx-section-subcontainer">
               {provider.id !== 'std-libraries-id' ? (
                 <TemplateConfig
                   provider={provider}

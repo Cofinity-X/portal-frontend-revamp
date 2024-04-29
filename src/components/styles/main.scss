@@ -68,26 +68,27 @@ section {
 
 a {
   color: color(primary);
+
   &:hover {
     color: color(primary-hover);
   }
+
   &:active {
     color: color(text-primary);
   }
+
   &:disabled {
     color: color(disabled);
   }
 }
 
 .orange-background {
-  background-image: linear-gradient(
-    to right,
-    #ffb326,
-    #ffa524,
-    #ff9625,
-    #ff8728,
-    #ff782c
-  );
+  background-image: linear-gradient(to right,
+      #ffb326,
+      #ffa524,
+      #ff9625,
+      #ff8728,
+      #ff782c);
   overflow: hidden;
 }
 
@@ -100,3 +101,5 @@ a {
 .app-back button {
   text-transform: capitalize;
 }
+
+@import 'cofinity-x';

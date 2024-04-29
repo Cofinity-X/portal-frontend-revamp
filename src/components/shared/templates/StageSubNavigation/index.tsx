@@ -63,7 +63,7 @@ export const StageSubNavigation = ({
         ...customStyles,
       }}
     >
-      <div className="subNavigationContainer">
+      <div className="subNavigationContainer cx-subnavigation_container">
         {isWeb ? (
           <ParentSubNavigation
             navigationArray={linkArray}

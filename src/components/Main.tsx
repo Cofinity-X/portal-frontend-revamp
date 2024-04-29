@@ -23,7 +23,7 @@ import { useDispatch } from 'react-redux'
 import { Outlet, useNavigate, useSearchParams } from 'react-router-dom'
 import { CircleProgress, ErrorPage } from '@catena-x/portal-shared-components'
 import { Header } from './shared/frame/Header'
-import { Footer } from './shared/frame/Footer'
+import { Footer } from './shared/cx/Footer'
 import { useTranslation } from 'react-i18next'
 import AccessService from '../services/AccessService'
 import MainOverlay from './MainOverlay'
@@ -42,6 +42,7 @@ import RegistrationStatus from './pages/RegistrationStatus'
 import Logout from './pages/Logout'
 import Redirect from './actions/Redirect'
 import { OSPConsent } from './pages/OSPConsent'
+import { Sidebar } from './shared/cx/Sidebar'
 
 export default function Main() {
   const { t } = useTranslation()
@@ -128,7 +129,12 @@ export default function Main() {
             user={AccessService.userMenu()}
           />
           <MainSearchOverlay />
-          <Outlet />
+          <div className="cx-sidebar">
+            <Sidebar />
+          </div>
+          <div className="cx-main">
+            <Outlet />
+          </div>
           <Footer pages={AccessService.footerMenu()} />
           <MainOverlay />
           <MainNotify />

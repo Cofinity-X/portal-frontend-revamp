@@ -18,21 +18,40 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import NewsSection from './components/NewsSection'
-import BusinessApplicationsSection from './components/BusinessApplicationsSection'
-import StageSection from './components/StageSection'
-import AppStoreSection from './components/AppStoreSection'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import './Home.scss'
+body {
+    max-width: 100%;
+}
 
-export default function Home() {
-  return (
-    <main className="home cx-home">
-      <StageSection />
-      <NewsSection />
-      <BusinessApplicationsSection />
-      <AppStoreSection />
-    </main>
-  )
+header {
+    background: #fff;
+}
+
+.cx {
+    &-main {
+        display: flex;
+        width: 100%;
+
+        main {
+            // width: calc(100% - 350px);
+        }
+    }
+
+
+
+    &-section-container {
+        padding: 0 20px;
+    }
+
+    &-section-subcontainer {
+        max-width: 100%;
+    }
+
+    &-subnavigation_container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.appoverview-app {
+    width: 100%;
 }
